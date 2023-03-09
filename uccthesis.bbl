@@ -1,0 +1,184 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Lamport:94}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef82223e035dbb62f84cb1c0782df38c}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={L.\bibnamedelimi },
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ef82223e035dbb62f84cb1c0782df38c}
+      \strng{fullhash}{ef82223e035dbb62f84cb1c0782df38c}
+      \strng{bibnamehash}{ef82223e035dbb62f84cb1c0782df38c}
+      \strng{authorbibnamehash}{ef82223e035dbb62f84cb1c0782df38c}
+      \strng{authornamehash}{ef82223e035dbb62f84cb1c0782df38c}
+      \strng{authorfullhash}{ef82223e035dbb62f84cb1c0782df38c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{\LaTeX: A Document Preparation System}
+      \field{year}{1994}
+    \endentry
+    \entry{biblatex}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=97afecc8539f253db93a1c737d62212c}{%
+           family={Lehman},
+           familyi={L\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97afecc8539f253db93a1c737d62212c}
+      \strng{fullhash}{97afecc8539f253db93a1c737d62212c}
+      \strng{bibnamehash}{97afecc8539f253db93a1c737d62212c}
+      \strng{authorbibnamehash}{97afecc8539f253db93a1c737d62212c}
+      \strng{authornamehash}{97afecc8539f253db93a1c737d62212c}
+      \strng{authorfullhash}{97afecc8539f253db93a1c737d62212c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version~1.0}
+      \field{title}{The \texttt{biblatex} Package}
+      \field{year}{2010}
+    \endentry
+    \entry{classicthesis}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=649da87eb5b9d8d2ebdb1d3fbd59d0f1}{%
+           family={Miede},
+           familyi={M\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \strng{fullhash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \strng{bibnamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \strng{authorbibnamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \strng{authornamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \strng{authorfullhash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Classic Thesis Style}
+      \field{year}{2007}
+    \endentry
+    \entry{arsclassica}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2c7d803dc13dd6528b75e80caf0ab3ef}{%
+           family={Pantieri},
+           familyi={P\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \strng{fullhash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \strng{bibnamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \strng{authorbibnamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \strng{authornamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \strng{authorfullhash}{2c7d803dc13dd6528b75e80caf0ab3ef}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Customizing ClassicThesis with the ArsClassica package}
+      \field{year}{2010}
+    \endentry
+    \entry{LAF}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7d2f8c179cd33de9d1a679d72580ef5a}{%
+           family={van\bibnamedelima Dongen},
+           familyi={v\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={M.{\thinspace}R.{\thinspace}C.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \strng{fullhash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \strng{bibnamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \strng{authorbibnamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \strng{authornamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \strng{authorfullhash}{7d2f8c179cd33de9d1a679d72580ef5a}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{\LaTeX} and Friends}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb http://www.springer.com/computer/media+design/book/978-3-642-23815-4
+      \endverb
+      \verb{url}
+      \verb http://www.springer.com/computer/media+design/book/978-3-642-23815-4
+      \endverb
+    \endentry
+    \entry{fancyhdr}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9869d88ab60333db37f5aa4d2644b76a}{%
+           family={Oostrum},
+           familyi={O\bibinitperiod},
+           given={Piet},
+           giveni={P\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{9869d88ab60333db37f5aa4d2644b76a}
+      \strng{fullhash}{9869d88ab60333db37f5aa4d2644b76a}
+      \strng{bibnamehash}{9869d88ab60333db37f5aa4d2644b76a}
+      \strng{authorbibnamehash}{9869d88ab60333db37f5aa4d2644b76a}
+      \strng{authornamehash}{9869d88ab60333db37f5aa4d2644b76a}
+      \strng{authorfullhash}{9869d88ab60333db37f5aa4d2644b76a}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Page Layout in {\LaTeX}}
+      \field{year}{2004}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
