@@ -1,8 +1,8 @@
 \documentclass[MScCS]{uccthesis}
 
-\title{The \texttt{uccthesis} Class}
-\author{M.\,R.\,C. van Dongen}
-\supervisor{Dr Who}
+\title{Rational Bloom Filters}
+\author{Ross Heaney}
+\supervisor{Dr Marc Van Dongen}
 \secondreader{Dr Who}
 \date{\today}
 
@@ -12,7 +12,7 @@
 \addbibresource{mybib.bib}% should be in preamble
 
 \abstract{%
-   This document describes the \texttt{uccthesis} class.
+Bloom Filters are a type of space-efficient probabilistic data structure that can be used to test whether an element is a member of a set. That is when the Bloom Filter is queried 'does this element exist in the set?' and the Bloom Filter returns 'yes' when in fact the element does not exist in the set. We accept these false positives as by agreeing to occasionally get a false positive, we gain an enormous space advantage versus had we refused to accept a false positive.  Using mathematics we can know in advance our false positive rate and tune the bloom filter accordingly. Namely, by setting the size of our bit array to $\frac{K}{S}\ln(2)$ we can reduce the false positive rate of the bloom filter to $2^{-K}$, which is optimal. Given a maximum, allowed false positive rate, r, finding the optimal (minimal) value for k is easy. By assumption k is integral, which makes it difficult to tune a Bloom filter when the desired false positive rate is almost of the form $2^{-k}$. For example, a small change in r may result in a significant increase in the size of the filter, especially when k is small. This thesis is about relaxing this integrality assumption and comparing to the state of the art.
 }
 
 %\dedication{%
@@ -27,315 +27,37 @@
 }
 
 \begin{document}
-   \chapter{Introduction}
-      This chapter explains the \texttt{uccthesis} class,
-       the main purpose of which is to write a thesis
-       with minimal configuration.
+\chapter{Introduction}
 
-   \section{Thesis Structure}
-      A typical thesis consists of
-       \emph{front matter},
-       \emph{main matter}, and
-       \emph{back matter}.
-      The front matter of
-        of typical document consists of
-       (1)~a title page with title back page,
-       (2)~an abstract,
-       (3)~a declaration page,
-       (4)~an optional acknowledgement page,
-       (5)~an optional dedication page, and
-       (6)~a table of contents,
-       (7)~a list of tables, and
-       (8)~a list of figures.
-      The frontmatter is inserted \emph{automatically}.
-      The back matter typically
-       consists of the bibliography.
-      Any other back matter should be typeset explicitly.
+Bloom Filters are a type of space-efficient probabilistic data structure that can be used to test whether an element is a member of a set. They have exploded in popularity as their usefulness is proportional to the size of the membership set. That is, the larger the size of the dataset we wish to query, the more useful Bloom Filters are. With ever-increasing amounts of data being produced and pipelined year after year, the more Bloom Filters have become almost necessary. In this first chapter I will discuss my thesis mission and the literature review plan. I then follow on with the background and related work in chapter 2. Specifically I discuss the origins of the Bloom Filter via the original paper by Bloom\cite{bloom1970space} and discuss important mathematical results by Kirsch and Mitzenmacher as well as a small but important detail from the book by Mitzenmacher and Upfal\cite{kirsch2006less}\cite{mitzenmacher2017probability}.
 
-      The commands `\COMMAND{declaration}' and
-       `\COMMAND{dedication}' may be used to
-       include a declaration or a dedication.
-      However, there is no need to use these commands.
+\section{Motivations}
+As mentioned in the Introduction, bloom filters are a type space efficient probabilistic data structure. First conceived in the 1970s, Bloom Filters have seen widespread use ever since. Today they are used in a variety of applications, including network security, distributed systems, and databases. As data gets larger and larger it becomes more and more difficult to store and process it. Bloom Filters are a way to store and process data in a space efficient manner. This is done by using the so called 'Allowable Error Hashing' technique proposed in the landmark paper, by Burton Howard Bloom, in 1970\cite{bloom1970space}. This technique allows for a trade-off between the space efficiency and the accuracy of the data structure. More importantly, we can tune and optimize the Bloom Filter in relation to the accuracy and space efficiency of the data structure. Specifically this project and thesis titled 'Rational Bloom Filters' will focus on looking at new ways to tune and optimize the Bloom Filter with a specific focus on relaxing the integrality assumption of the number of hash functions required for the Bloom Filter to function properly.
 
-      The main matter of the document
-       starts by writing \COMMANDWITHARGUMENT{begin}{document}.
-      Additional material may be added
-       to the document's front matter by \emph{redefining} the command
-       \label{addToFrontMatter}
-       `\COMMAND{addToFrontMatter[0]}'.
-      This may be useful if you wish to include
-       additional lists of things to the document front matter.
-      Any commands which are defined by this command
-       are inserted before the first chapter.
-      You should use the `\COMMAND{renewcommand}'
-       command to redefine the command
-       `\COMMAND{addToFrontMatter}'.
+\section{Thesis Mission}
+Bloom Filters are based on hashing. Specifically hashing where we accept there will be some hash collisions that will give rise to so called 'false positives'. That is when the Bloom Filter is queried 'does this element exist in the set?' and the Bloom Filter returns 'yes' when in fact the element does not exist in the set. We accept these false positives as by agreeing to occasionally get a false positive, we gain an enormous space advantage versus had we refused to accept a false positive.  Using mathematics we can know in advance our false positive rate and tune the bloom filter accordingly. Namely, by setting the size of our bit array to $\frac{K}{S}\ln(2)$ we can reduce the false positive rate of the bloom filter to $2^{-K}$, which is optimal. Given a maximum, allowed false positive rate, r, finding the optimal (minimal) value for k is easy. By assumption k is integral, which makes it difficult to tune a Bloom filter when the desired false positive rate is almost of the form $2^{-k}$. For example, a small change in r may result in a significant increase in the size of the filter, especially when k is small. This thesis is about relaxing this integrality assumption and comparing to the state of the art.
 
-   \section{Class Options}
-      The \texttt{uccthesis}
-       class is built on top of the \texttt{book}%
-       ~\parencite{Lamport:94} class.
-      The options
-       `\texttt{a4paper}',
-       `\texttt{openright}',
-       `\texttt{titlepage}', and
-       `\texttt{fleqn}'
-       are automatically passed to the \texttt{book} class by default.
-      The `\texttt{draft}' option is only passed to
-       the `\texttt{book}' class if you provide the option
-       as an option of the \texttt{uccthesis} class.
-      Using the option
-       results in displaying the word `Draft' on the titlepage.
-      Table~\ref{tab:options} lists the remaining document options
-       and default values.
-      \begin{table}[tbp]
-      \begin{tabular}{lll}
-        \toprule
-        \textbf{Option}   & \textbf{Default} & \textbf{Description}
-      \\\midrule
-        \textbf{10pt}     &     & Set point size to 10\,pt
-      \\\textbf{11pt}     &     & Set point size to 11\,pt
-      \\\textbf{12pt}     & on  & Set point size to 12\,pt
-      \\\textbf{oneside}  & on  & Enforce onesided pages
-      \\\textbf{twoside}  &     & Enforce twosided pages
-      \\\textbf{singlespacing} & on & Set line spacing to single spacing
-      \\\textbf{onehalfpacing} & off & Discouraged: set line spacing to $1.5$ spacing
-      \\\textbf{doublespacing} & off & Discouraged: set line spacing to double spacing
-      \\\textbf{draft}    &     & Set draft option
-      \\\midrule
-        \multicolumn{3}{r}{\textbf{Sets Degree to}}
-      \\\midrule
-        \textbf{BScCS}    &     & BSc Computer Science
-      \\\textbf{BScDSA}   &     & BSc Data Science and Analytics
-      \\\textbf{DHIT}     &     & BA Digital Humanities and Information Technology
-      \\\textbf{MScCS}    &     & MSc Computing Science
-      \\\textbf{MScDSA}   &     & MSc Data Science and Analytics
-      \\\textbf{MScIM}    &     & MSc Interactive Media
-      \\\textbf{MScResearch} &  & MSc Computer Science (Research)
-      \\\textbf{PhD}      &     & PhD Computer Science
-      \\\midrule
-        \textbf{ManyFigures}   &    & Increase width of figure numbers in \texttt{lof}
-      \\\textbf{ManyTables}    &    & Increase width of table numbers in \texttt{lot}
-      \\\textbf{ManySections}  &    & Increase width of section numbers in \texttt{toc}
-      \\\textbf{ManySubsections}&    & Increase width of subsection numbers in \texttt{toc}
-      \\\textbf{final}    & on  & Set draft option off
-      \\\textbf{lot}      & on  & Include a list of tables
-      \\\textbf{nolot}    &     & Do not include a list of tables
-      \\\textbf{lof}      & on  & Include a list of figures
-      \\\textbf{nolof}    &     & Do not include a list of figures
-      \\\textbf{*}        & N/A & Option is passed to \texttt{book} class
-      \\\bottomrule
-      \end{tabular}
-      \caption[Class options of \protect\texttt{uccthesis} class.]
-              {\label{tab:options}Class options of \protect\texttt{uccthesis} class.
-               Most options are off by default.
-               The word `on' in the column `Default' is used
-                if and only if the option is on by default.
-               None of the options
-                \texttt{BScCS}, \texttt{BScDSA}, \texttt{DHIT},
-                \texttt{MScCS}, \texttt{MScDSA}, \texttt{MScIM}, \texttt{MScResearch}, and
-                \texttt{PhD}
-                is a default option.
-               At least one of these opions must be provided.
-               Failing to provide them will result in an error.}
-      \end{table}
-      The only allowed options to change the point size are
-       \texttt{10pt},
-       \texttt{11pt}, and
-       \texttt{12pt}.
-      Other options related to the point size are not supported.
-      The options
-       \texttt{a5paper},
-       \texttt{b5paper},
-       \texttt{letterpaper},
-       \texttt{legalpaper},
-       \texttt{executivepaper}, and
-       \texttt{landscape}
-       are also not supported.
+\chapter{Background and Literature Review}
+In this chapter I will discuss the background and related work in the area of bloom filters. Specifically I will discuss the concept of a bloom filter before discussing the original paper by Bloom and the recent work done on bloom filters as it relates to this thesis. Throughout, I will be discussing important mathematical results that are relevant to the thesis.
+\section{Concept of a Bloom Filter}
+The concept of a bloom filter is summarized nicely in this diagram \ref{fig:bloomfilter}. The core idea behind bloom filters is the concept of hashing. Hashing is simply the transformation of an input value to an output value. In a bloom filter, sometimes a different input will transform to the same output. This is called a hash collision. In certain use cases such as cryptography, hash collisons can be very dangerous, but in the case of Bloom Filters, we accept hash collisions. So, naturally the question is why do we allow hash collisons in Bloom Filters? The answer to that question is space efficiency. By allowing hash collisions we can reduce the space required to store the data structure. This will be discussed in more detail in the next section. For now, it is important to note that the core idea behind a bloom filter is the concept of hashing and allowing hash collisions. The core use case of a Bloom Filter is testing set membership. This is where we can query whether 'x' is present in the Bloom Filter or not. The Bloom Filter will respond either "possibly in the set" or "definitely not in the set". The Bloom Filter will never return a \textit{false negative} but \textit{false positives} are possible.
 
-      Please note that a table of contents,
-       a list of tables, and
-       a list of figures are included \emph{by default.}
-      Including a list of tables and list of figures
-       can be turned off with the options
-       `\texttt{nolot}' and `\texttt{nolof}'.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figures/bloom-filters-poster.png}
+    \caption{Bloom Filter Summary}
+    \label{fig:bloomfilter}
+\end{figure}
+\section{Original Paper by Burton Howard Bloom}
+The paper was the first paper to introduce the idea of \textit{Allowable Error Hashing}, which is the basis of Bloom Filters. The essence of Bloom Filters is that set membership, is this item in this set?, can be answered in one of two ways. The first way is to return \underline{yes this item is in the set} and the other way is to say \underline{no this item is not in the set}. Bloom Filters \textbf{guarantee} that false negatives are not possible, while occasionally a false positive is possible. In other words when a Bloom Filter is queried whether an item is in the set or not, it will return "possibly in the set" or "definitely not in the set". The underlying mechanism for the construction of a Bloom Filter is a number of hash functions that map elements of a set to indices on an array. This can be seen in Figure \ref{fig:bloomfilter}. The paper introduced the key concept of an \textit{Allowable Error Rate}. By accepting that we will get a false positive occasionally, we can achieve remarkable space efficiency. The paper's proposed idea is analysed quite nicely via a mathematical comparison between the conventional error-free hashing, state of the art in the 1970s, and the authors proposed \textit{Allowable Error Hashing}. It should be noted that some errors have been found in the original paper and updates published\cite{bose2008false}. The errors found are mostly to do with edge cases and do not necessarily diminish the original paper's contribution. The paper discusses an example of a hyphenation algorithm. Suppose we have a dictionary of 500,000 words of which 90\% follow simple hyphenation rules but the remaining 10\% require expensive disk access to retrieve very specific hyphenation rules that are stored on the disk. By applying the authors \textit{Allowable Error Hashing} technique, disk access is greatly reduced. A hash area only 15\% of the total size needed by an error-free hash cuts down on 85\% of the disk access required. The main idea is not that error-free hashing is bad but rather there is a proposed alternative called \textit{Allowable Error Hashing} that is better suited to certain applications.
 
-   \section{Styles}
+\section{Less Hashing, Same Performance}
 
-      The following style files are automatically loaded by
-       the class:
-       \texttt{amsthm},
-       \texttt{amsmath},
-       \texttt{babel},
-       \texttt{beramono},
-       \texttt{biblatex},
-       \texttt{booktabs},
-       \texttt{calc},
-       \texttt{chngpage},
-       \texttt{fancyhdr},
-       \texttt{fontenc},
-       \texttt{fourier},
-       \texttt{graphicx}.
-       \texttt{inputenc},
-       \texttt{microtype},
-       \texttt{minitoc},
-       \texttt{pgfplots},
-       \texttt{setspace},
-       \texttt{textcase},
-       \texttt{tikz},
-       \texttt{url}, and
-       \texttt{xcolor},
-
-   \section{Bibliography Style}
-
-      The bibliography style is hardcoded
-       with \texttt{biblatex}~\parencite{biblatex}, which
-       is automatically loaded so you can
-       distinguish between
-       \emph{parenthetical citations}: \parencite{biblatex}, and
-       \emph{textual citations}:\textcite{biblatex}.
-      The former kind of citations may be obtained
-       with the command \COMMAND{parencite}.
-      The latter citations may be obtained
-       with the command \COMMAND{textcite}.
-      You can force an uppercase letter in a ``Von'' part by
-       capitalising the first letter of these commands:
-       \COMMAND{Parencite} and
-       \COMMAND{Textcite}.
-      For example,
-       with the parenthetical version this gives you
-       `\Textcite{LAF}' as opposed to `\textcite{LAF}'.
-      More details may be found in \Textcite{LAF}.
-      Any attempt to redefine the bibliography style is ignored.
-      \emph{Note that the \texttt{biblatex} package
-             only lets you put the \COMMAND{bibliography}
-             command in the document preamble.}
-
-      Since the bibliography depends on \texttt{biblatex},
-       users should refrain from using the \COMMAND{cite} command.
-
-      The \texttt{biblatex} package uses \texttt{biber} as the back-end.
-      When citations have changed or the bibliography has changed,
-       they should run the \texttt{biber} command (not \texttt{bibtex})
-       on the base name of they main thesis source file.
-
-   \section{Implementation Details}
-
-      The implementation is relatively simple.
-      The code for the titlepage is borrowed
-       from \texttt{arsclassica}~\Parencite{arsclassica}
-      A few macros are from
-       \texttt{arsclassica}~\Parencite{arsclassica} and
-       \texttt{classicthesis}~\Parencite{classicthesis}
-      The code to typeset the abstract is from
-       the \texttt{book}~\Parencite{Lamport:94} class.
-      The code for the pagestyle for twosided documents
-       is based on the \texttt{fancyhdr} manual~\Parencite{fancyhdr}.
-
-      The author of the thesis is defined with
-       the \COMMAND{author} command.
-      The name of the supervisor is defined with
-       the \COMMAND{supervisor} command.
-      The name of the second reader is defined with
-       the \COMMAND{secondreader} command.
-
-   \chapter{Example}
-
-      Figure~\ref{fig:example}
-       depicts a minimal example of how to use the \texttt{uccthesis} class.
-      \begin{figure}[hbtp]
-      \hrule
-      \vspace{0.5em}
-\begin{scriptsize}
-\begin{verbatim}
-% Thesis for MSc Computing Science with default style.
-\documentclass[MScCS]{uccthesis}
-% The following uses all default options.
-% \documentclass[MScCS,lof,lot,12pt,oneside,singlespacing,final]{uccthesis}
-% Other examples:
-% \documentclass[MScCS,nolof,nolot,11pt,twoside,singlespacing,draft]{uccthesis}
-% \documentclass[MScIM,12pt]{uccthesis}
-% \documentclass[BSc,12pt]{uccthesis}
-
-\addbibresource{mybib.bib} % bibliography must be defined in preamble
-
-\title{How I got my MSc}
-\author{Student's Name}
-\supervisor{Supervisor's Name}
-\secondreader{Second Reader's Name}
-\date{\today} % Student should define the actual date
-
-\abstract{Abstracts should be short.}
-\dedication{This thesis is dedicated to mum.}
-%\acknowledgement{Your acknowledgement here.}
-
-\renewcommand\addToFrontMatter[0]{%
-}
-
-\begin{document}
-   \chapter{Introduction}
-      \ldots
-   \chapter{Notation}
-      \ldots
-   \chapter{Conclusions}
-      \ldots
-   % start backmatter
-   \backmatter
-   % Print the bibliography
-   \printbibliography
-\end{document}
-\end{verbatim}
-\end{scriptsize}
-      \hrule
-      \caption{\label{fig:example}Using the \protect\texttt{uccthesis} class.}
-      \vspace{0.5em}
-      \hrule
-   \end{figure}
-
-      The following
-       demonstrates how to include an external picture.
-\begin{scriptsize}
-\begin{verbatim}
-The following
- demonstrates how to include an external picture.
-\begin{figure}[hbtp]
-\hrule
-\vspace{0.5em}
-\centering
-\includegraphics[width=0.95\textwidth]{Figures/jpgpic.jpg}
-\vspace{0.5em}
-\hrule
-\caption{\label{fig:including@a@picture}Including an external picture.}
-\vspace{0.5em}
-\hrule
-The result is depicted in Figure~\ref{fig:including@a@picture}
-\end{verbatim}
-\end{scriptsize}
-      The result is depicted in Figure~\ref{fig:including@a@picture}
-
-      \begin{figure}[hbtp]
-      \hrule
-      \vspace{0.5em}
-      \centering
-      \includegraphics[width=0.95\textwidth]{Figures/jpgpic.jpg}
-      \vspace{0.5em}
-      \hrule
-      \caption{\label{fig:including@a@picture}Including an external picture.}
-      \vspace{0.5em}
-      \hrule
-   \end{figure}
-
-\chapter{Bugs and Requests for Features}
-
-   Bugs and requests for features
-    may be reported by email to \url{dongen@cs.ucc.ie}.
-   When reporting bugs, please describe
-    the bug as well as providing a \emph{minimal} example.
 
 %
 %
 \backmatter
 %
 %
-   \printbibliography
+\printbibliography
 \end{document}

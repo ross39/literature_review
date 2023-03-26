@@ -18,165 +18,160 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global}
-    \entry{Lamport:94}{book}{}
+  \datalist[entry]{nty/global//global/global}
+    \entry{bloom1970space}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ef82223e035dbb62f84cb1c0782df38c}{%
-           family={Lamport},
-           familyi={L\bibinitperiod},
-           given={L.\bibnamedelimi },
-           giveni={L\bibinitperiod},
-           givenun=0}}%
+        {{hash=3124dcc7c1c1643c091687ec4b0dcd3e}{%
+           family={Bloom},
+           familyi={B\bibinitperiod},
+           given={Burton\bibnamedelima H},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Addison-Wesley}%
+        {ACM New York, NY, USA}%
       }
-      \strng{namehash}{ef82223e035dbb62f84cb1c0782df38c}
-      \strng{fullhash}{ef82223e035dbb62f84cb1c0782df38c}
-      \strng{bibnamehash}{ef82223e035dbb62f84cb1c0782df38c}
-      \strng{authorbibnamehash}{ef82223e035dbb62f84cb1c0782df38c}
-      \strng{authornamehash}{ef82223e035dbb62f84cb1c0782df38c}
-      \strng{authorfullhash}{ef82223e035dbb62f84cb1c0782df38c}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \strng{namehash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \strng{fullhash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \strng{bibnamehash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \strng{authorbibnamehash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \strng{authornamehash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \strng{authorfullhash}{3124dcc7c1c1643c091687ec4b0dcd3e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{\LaTeX: A Document Preparation System}
-      \field{year}{1994}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{7}
+      \field{title}{Space/time trade-offs in hash coding with allowable errors}
+      \field{volume}{13}
+      \field{year}{1970}
+      \field{pages}{422\bibrangedash 426}
+      \range{pages}{5}
     \endentry
-    \entry{biblatex}{manual}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=97afecc8539f253db93a1c737d62212c}{%
-           family={Lehman},
-           familyi={L\bibinitperiod},
-           given={Philipp},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{97afecc8539f253db93a1c737d62212c}
-      \strng{fullhash}{97afecc8539f253db93a1c737d62212c}
-      \strng{bibnamehash}{97afecc8539f253db93a1c737d62212c}
-      \strng{authorbibnamehash}{97afecc8539f253db93a1c737d62212c}
-      \strng{authornamehash}{97afecc8539f253db93a1c737d62212c}
-      \strng{authorfullhash}{97afecc8539f253db93a1c737d62212c}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Version~1.0}
-      \field{title}{The \texttt{biblatex} Package}
-      \field{year}{2010}
-    \endentry
-    \entry{classicthesis}{manual}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=649da87eb5b9d8d2ebdb1d3fbd59d0f1}{%
-           family={Miede},
+    \entry{bose2008false}{article}{}
+      \name{author}{8}{}{%
+        {{hash=0b84ce73ece0dc3e485cc33c86241da4}{%
+           family={Bose},
+           familyi={B\bibinitperiod},
+           given={Prosenjit},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f4a76a837dd18ff55753e445c8ce241d}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Hua},
+           giveni={H\bibinitperiod}}}%
+        {{hash=33abfb46d14359e9e00e34f66644ecf3}{%
+           family={Kranakis},
+           familyi={K\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e08f0a3a7715a2eac9e252d96a1843e5}{%
+           family={Maheshwari},
            familyi={M\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \strng{fullhash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \strng{bibnamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \strng{authorbibnamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \strng{authornamehash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \strng{authorfullhash}{649da87eb5b9d8d2ebdb1d3fbd59d0f1}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{A Classic Thesis Style}
-      \field{year}{2007}
-    \endentry
-    \entry{arsclassica}{manual}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2c7d803dc13dd6528b75e80caf0ab3ef}{%
-           family={Pantieri},
-           familyi={P\bibinitperiod},
-           given={Lorenzo},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \strng{fullhash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \strng{bibnamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \strng{authorbibnamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \strng{authornamehash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \strng{authorfullhash}{2c7d803dc13dd6528b75e80caf0ab3ef}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Customizing ClassicThesis with the ArsClassica package}
-      \field{year}{2010}
-    \endentry
-    \entry{LAF}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=7d2f8c179cd33de9d1a679d72580ef5a}{%
-           family={van\bibnamedelima Dongen},
-           familyi={v\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={M.{\thinspace}R.{\thinspace}C.},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
+           given={Anil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a64ece1a32650664e9e1a40e167b03c0}{%
+           family={Morin},
+           familyi={M\bibinitperiod},
+           given={Pat},
+           giveni={P\bibinitperiod}}}%
+        {{hash=039ef1f428fae646dda1ddee1665e14a}{%
+           family={Morrison},
+           familyi={M\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=492f25cc203ed778e51da72b1712caae}{%
+           family={Smid},
+           familyi={S\bibinitperiod},
+           given={Michiel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=079448311987f4f0fd48761ab5bf9e32}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yihui},
+           giveni={Y\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{63d08488d3ab14abc26f7d32e993fe0b}
+      \strng{fullhash}{a6dd8c10fbca341749ce19e6f5a01caf}
+      \strng{bibnamehash}{63d08488d3ab14abc26f7d32e993fe0b}
+      \strng{authorbibnamehash}{63d08488d3ab14abc26f7d32e993fe0b}
+      \strng{authornamehash}{63d08488d3ab14abc26f7d32e993fe0b}
+      \strng{authorfullhash}{a6dd8c10fbca341749ce19e6f5a01caf}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Processing Letters}
+      \field{number}{4}
+      \field{title}{On the false-positive rate of Bloom filters}
+      \field{volume}{108}
+      \field{year}{2008}
+      \field{pages}{210\bibrangedash 213}
+      \range{pages}{4}
+    \endentry
+    \entry{kirsch2006less}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=7c52241d31326decffca130d6880ecf9}{%
+           family={Kirsch},
+           familyi={K\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4dbcb1c7060726deee27d97b4bf31321}{%
+           family={Mitzenmacher},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
         {Springer}%
       }
-      \strng{namehash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \strng{fullhash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \strng{bibnamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \strng{authorbibnamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \strng{authornamehash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \strng{authorfullhash}{7d2f8c179cd33de9d1a679d72580ef5a}
-      \field{sortinit}{v}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \strng{namehash}{d3077566aa7668be35ce8ee35c5322e1}
+      \strng{fullhash}{d3077566aa7668be35ce8ee35c5322e1}
+      \strng{bibnamehash}{d3077566aa7668be35ce8ee35c5322e1}
+      \strng{authorbibnamehash}{d3077566aa7668be35ce8ee35c5322e1}
+      \strng{authornamehash}{d3077566aa7668be35ce8ee35c5322e1}
+      \strng{authorfullhash}{d3077566aa7668be35ce8ee35c5322e1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{\LaTeX} and Friends}
-      \field{year}{2012}
-      \verb{urlraw}
-      \verb http://www.springer.com/computer/media+design/book/978-3-642-23815-4
-      \endverb
-      \verb{url}
-      \verb http://www.springer.com/computer/media+design/book/978-3-642-23815-4
-      \endverb
+      \field{booktitle}{Algorithms--ESA 2006: 14th Annual European Symposium, Zurich, Switzerland, September 11-13, 2006. Proceedings 14}
+      \field{title}{Less hashing, same performance: Building a better bloom filter}
+      \field{year}{2006}
+      \field{pages}{456\bibrangedash 467}
+      \range{pages}{12}
     \endentry
-    \entry{fancyhdr}{manual}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9869d88ab60333db37f5aa4d2644b76a}{%
-           family={Oostrum},
-           familyi={O\bibinitperiod},
-           given={Piet},
-           giveni={P\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
+    \entry{mitzenmacher2017probability}{book}{}
+      \name{author}{2}{}{%
+        {{hash=4dbcb1c7060726deee27d97b4bf31321}{%
+           family={Mitzenmacher},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bb283362dabfd7d804c298b157e8cb43}{%
+           family={Upfal},
+           familyi={U\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod}}}%
       }
-      \strng{namehash}{9869d88ab60333db37f5aa4d2644b76a}
-      \strng{fullhash}{9869d88ab60333db37f5aa4d2644b76a}
-      \strng{bibnamehash}{9869d88ab60333db37f5aa4d2644b76a}
-      \strng{authorbibnamehash}{9869d88ab60333db37f5aa4d2644b76a}
-      \strng{authornamehash}{9869d88ab60333db37f5aa4d2644b76a}
-      \strng{authorfullhash}{9869d88ab60333db37f5aa4d2644b76a}
-      \field{sortinit}{v}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \strng{fullhash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \strng{bibnamehash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \strng{authorbibnamehash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \strng{authornamehash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \strng{authorfullhash}{f291aba097fea1ebb12ca21bc1eafbb8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Page Layout in {\LaTeX}}
-      \field{year}{2004}
+      \field{title}{Probability and computing: Randomization and probabilistic techniques in algorithms and data analysis}
+      \field{year}{2017}
     \endentry
   \enddatalist
 \endrefsection

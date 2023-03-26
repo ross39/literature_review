@@ -52,8 +52,8 @@
 \def\ucc@declareoption#1\ucc@enddeclareoption{%
     \DeclareOption{#1}{%
         \ClassError{uccthesis}%
-                   {Option #1 disallowed.}%
-                   {See package documentation for further information.}}%
+        {Option #1 disallowed.}%
+        {See package documentation for further information.}}%
 }%
 \@for\size:=1,2,3,4,5,6,7,8,9,13,14,15,16,17,18,19,20\do{
     \expandafter\ucc@declareoption\size pt\ucc@enddeclareoption%
@@ -68,11 +68,11 @@
 \ProcessOptions\relax
 
 \LoadClass[\ucc@x@pt,
-           \ucc@x@side,
-           a4paper,
-           openright,
-           titlepage,
-           fleqn]{book}
+    \ucc@x@side,
+    a4paper,
+    openright,
+    titlepage,
+    fleqn]{book}
 \usepackage{uccutil2}
 
 \RequirePackage[\ucc@spacing]{setspace}
@@ -84,13 +84,13 @@
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
 \RequirePackage[latin1]{inputenc}
-\RequirePackage[T1]{fontenc} 
+\RequirePackage[T1]{fontenc}
 
-\RequirePackage[style=authoryear,
-                useprefix=true,
-                block=space,
-                backend=biber,
-                language=british]{biblatex}
+\RequirePackage[style=numeric,
+    useprefix=true,
+    block=space,
+    backend=biber,
+    language=british]{biblatex}
 \renewcommand*{\bibopenparen}{[}
 \renewcommand*{\bibcloseparen}{]}
 \renewcommand*{\finalandcomma}{,}
