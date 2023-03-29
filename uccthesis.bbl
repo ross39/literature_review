@@ -112,6 +112,67 @@
       \field{pages}{210\bibrangedash 213}
       \range{pages}{4}
     \endentry
+    \entry{broder2004network}{article}{}
+      \name{author}{2}{}{%
+        {{hash=56f242d1477d1823d8b197fecefa9a1e}{%
+           family={Broder},
+           familyi={B\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4dbcb1c7060726deee27d97b4bf31321}{%
+           family={Mitzenmacher},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \strng{fullhash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \strng{bibnamehash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \strng{authorbibnamehash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \strng{authornamehash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \strng{authorfullhash}{cd7d468f5fe02ec59d8b859ff69452c3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Internet mathematics}
+      \field{number}{4}
+      \field{title}{Network applications of bloom filters: A survey}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{pages}{485\bibrangedash 509}
+      \range{pages}{25}
+    \endentry
+    \entry{dai2019adaptive}{article}{}
+      \name{author}{2}{}{%
+        {{hash=abe243c80b99676f1ac52a0f39ca794a}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Zhenwei},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=7013a70f3db2bf5e550611638cfbab8d}{%
+           family={Shrivastava},
+           familyi={S\bibinitperiod},
+           given={Anshumali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1928010a497cbedc22e836b887f7e44}
+      \strng{fullhash}{c1928010a497cbedc22e836b887f7e44}
+      \strng{bibnamehash}{c1928010a497cbedc22e836b887f7e44}
+      \strng{authorbibnamehash}{c1928010a497cbedc22e836b887f7e44}
+      \strng{authornamehash}{c1928010a497cbedc22e836b887f7e44}
+      \strng{authorfullhash}{c1928010a497cbedc22e836b887f7e44}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1910.09131}
+      \field{title}{Adaptive learned Bloom filter (Ada-BF): Efficient utilization of the classifier}
+      \field{year}{2019}
+    \endentry
     \entry{kirsch2006less}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=7c52241d31326decffca130d6880ecf9}{%
@@ -173,7 +234,45 @@
       \field{title}{Probability and computing: Randomization and probabilistic techniques in algorithms and data analysis}
       \field{year}{2017}
     \endentry
+    \entry{vaidya2020partitioned}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b6058f14b189d9787620cafb1875066f}{%
+           family={Vaidya},
+           familyi={V\bibinitperiod},
+           given={Kapil},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6bc2f4adc57e15e1df4d5bb87d700f0d}{%
+           family={Knorr},
+           familyi={K\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=06236ad5a15ffd4505a97a20555a384b}{%
+           family={Kraska},
+           familyi={K\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4dbcb1c7060726deee27d97b4bf31321}{%
+           family={Mitzenmacher},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{904c3ebf34a9d40386266d93e8884342}
+      \strng{fullhash}{9e52b165b2e3564b409d288844cc2bba}
+      \strng{bibnamehash}{904c3ebf34a9d40386266d93e8884342}
+      \strng{authorbibnamehash}{904c3ebf34a9d40386266d93e8884342}
+      \strng{authornamehash}{904c3ebf34a9d40386266d93e8884342}
+      \strng{authorfullhash}{9e52b165b2e3564b409d288844cc2bba}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2006.03176}
+      \field{title}{Partitioned learned bloom filter}
+      \field{year}{2020}
+    \endentry
   \enddatalist
+  \missing{dai2019optimizing}
 \endrefsection
 \endinput
 

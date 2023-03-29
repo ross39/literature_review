@@ -48,11 +48,47 @@ The concept of a bloom filter is summarized nicely in this diagram \ref{fig:bloo
     \caption{Bloom Filter Summary}
     \label{fig:bloomfilter}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{figures/bloom_filter_example.png}
+    \caption{An example of a bloom filter taken from \cite{broder2004network}.The filter begins as an array of all 0s. Each item in the set xi is hashed k times, with each hash yielding a bit location; these bits are set to 1. To check if an element y is in the set, hash it k times and check the corresponding bits. The element y1 cannot be in the set, since a0 is found at one of the bits. The element y2 is either in the set or the filter has yielded a false positive.}
+    \label{fig:bloomfilterExample}
+\end{figure}
+
+
+
 \section{Original Paper by Burton Howard Bloom}
 The paper was the first paper to introduce the idea of \textit{Allowable Error Hashing}, which is the basis of Bloom Filters. The essence of Bloom Filters is that set membership, is this item in this set?, can be answered in one of two ways. The first way is to return \underline{yes this item is in the set} and the other way is to say \underline{no this item is not in the set}. Bloom Filters \textbf{guarantee} that false negatives are not possible, while occasionally a false positive is possible. In other words when a Bloom Filter is queried whether an item is in the set or not, it will return "possibly in the set" or "definitely not in the set". The underlying mechanism for the construction of a Bloom Filter is a number of hash functions that map elements of a set to indices on an array. This can be seen in Figure \ref{fig:bloomfilter}. The paper introduced the key concept of an \textit{Allowable Error Rate}. By accepting that we will get a false positive occasionally, we can achieve remarkable space efficiency. The paper's proposed idea is analysed quite nicely via a mathematical comparison between the conventional error-free hashing, state of the art in the 1970s, and the authors proposed \textit{Allowable Error Hashing}. It should be noted that some errors have been found in the original paper and updates published\cite{bose2008false}. The errors found are mostly to do with edge cases and do not necessarily diminish the original paper's contribution. The paper discusses an example of a hyphenation algorithm. Suppose we have a dictionary of 500,000 words of which 90\% follow simple hyphenation rules but the remaining 10\% require expensive disk access to retrieve very specific hyphenation rules that are stored on the disk. By applying the authors \textit{Allowable Error Hashing} technique, disk access is greatly reduced. A hash area only 15\% of the total size needed by an error-free hash cuts down on 85\% of the disk access required. The main idea is not that error-free hashing is bad but rather there is a proposed alternative called \textit{Allowable Error Hashing} that is better suited to certain applications.
 
 \section{Less Hashing, Same Performance}
+he paper by  Kirsch and Mitzenmacher \cite{kirsch2006less} is a very nice paper that discusses the number of necessary hash functions to implement a Bloom Filter without any loss in asymptotic false positive probability. Specifically the paper proves a mathematical result that only two hash functions are necessary to implement the Bloom Filter. This paper is \textbf{not} saying that only two hash functions are all that is required for all Bloom Filters, rather that in certain cases only two hash functions are required. This is a vitally important result as it means we can limit our computation overhead and maintain the same performance. Bloom filters are randomized data structures as they rely on pseudorandom hash functions. By reducing the number of hash functions needed then this cuts down on much of the non-trivial computation required to create a Bloom Filter. The important result that was proved in this paper is the following mathematical statement: $(1-e^\frac{-kn}{m})^k$, where m is array size in bits, n is the number of elements in the m size array and k is the number of hash functions. This formula gives us the approximate probability of false positives but Mitzenmacher did it without the assumption of independence, an important distinction from previous mathematical analysis done in other papers. Also related, The book by Mitzenmacher and Upfal \cite{mitzenmacher2017probability} is a very nice book on probability and computing that discusses Bloom Filters in a dedicated subchapter. The important takeaway from the chapter among many other things is that the if you have an m-bit Bloom filter with n elements inserted, then the optimal number k of hash functions to use is $k = \frac{m}{n}\ln 2$.
 
+\section{Network Applications of Bloom Filters}
+This paper\cite{broder2004network} discusses some very interesting applications for Bloom Filters, and it's an important paper to get a better understanding of Bloom Filters and their uses. Specifically it discusses four instances of network related applications for Bloom Filters
+\begin{itemize}
+    \item Collaborating in overlay and peer-to-peer networks
+    \item Resource routing
+    \item Packet routing
+    \item Network measurement
+\end{itemize}
+Specifically what I learned from the paper is that Bloom Filters can play an important role in the optimization of networks. But more importantly the paper stresses there is a lot of room for innovation and improvement regarding Bloom Filters in the area of networking and the above list of network related applications involving Bloom Filters is not exhaustive, rather it is a starting point.
+
+
+\section{Probability and Computing by Mitzenmacher and Upfal}
+The chapter dedicated to Bloom filters in the fantastic book Probability and Computing by Mitzenmacher and Upfal \cite{mitzenmacher2017probability} is a very nice chapter that discusses Bloom Filters in a dedicated subchapter. The important takeaway from the chapter among many other things is that the if you have an m-bit Bloom filter with n elements inserted, then the optimal number k of hash functions to use is $k = \frac{m}{n}\ln 2$.
+
+\section{Partitioned learned bloom filter}
+The paper by Vaidya et al. \cite{vaidya2020partitioned} is a very interesting paper that discusses the use of Bloom Filters in the context of
+
+\cite{vaidya2020partitioned}
+\section{Adaptive Learned Bloom Filters}
+The paper by Dai et al. \cite{dai2019adaptive} is a very interesting paper that discusses the use of Bloom Filters in the context of
+\cite{dai2019adaptive}
+
+\section{Optimizing bloom filter: Challenges, solutions, and comparisons}
+The paper by Dai et al. \cite{dai2019optimizing} is a very interesting paper that discusses the use of Bloom Filters in the context of
+\cite{dai2019optimizing}
 
 %
 %

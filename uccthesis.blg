@@ -1,15 +1,18 @@
-[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'uccthesis.blg'
-[49] biber-darwin:340> INFO - === Sun Mar 26, 2023, 15:26:54
-[59] Biber.pm:418> INFO - Reading 'uccthesis.bcf'
-[122] Biber.pm:972> INFO - Found 4 citekeys in bib section 0
-[132] Biber.pm:4383> INFO - Processing section 0
-[139] Biber.pm:4574> INFO - Looking for bibtex file 'mybib.bib' for section 0
-[139] bibtex.pm:1713> INFO - LaTeX decoding ...
-[148] bibtex.pm:1518> INFO - Found BibTeX data source 'mybib.bib'
-[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[185] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[185] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[188] bbl.pm:654> INFO - Writing 'uccthesis.bbl' with encoding 'latin1'
-[189] bbl.pm:757> INFO - Output to uccthesis.bbl
+[35] biber-darwin:340> INFO - === Wed Mar 29, 2023, 22:33:48
+[42] Biber.pm:419> INFO - Reading 'uccthesis.bcf'
+[85] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
+[92] Biber.pm:4419> INFO - Processing section 0
+[97] Biber.pm:4610> INFO - Looking for bibtex file 'mybib.bib' for section 0
+[98] bibtex.pm:1713> INFO - LaTeX decoding ...
+[105] bibtex.pm:1519> INFO - Found BibTeX data source 'mybib.bib'
+[140] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[140] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[140] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[141] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[144] bbl.pm:660> INFO - Writing 'uccthesis.bbl' with encoding 'latin1'
+[146] bbl.pm:763> INFO - Output to uccthesis.bbl
+[146] Biber.pm:131> WARN - Duplicate entry key: 'broder2004network' in file 'mybib.bib', skipping ...
+[146] Biber.pm:131> WARN - I didn't find a database entry for 'dai2019optimizing' (section 0)
+[146] Biber.pm:133> INFO - WARNINGS: 2

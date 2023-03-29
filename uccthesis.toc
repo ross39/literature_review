@@ -10,4 +10,9 @@
 \contentsline {section}{\numberline {2.1}Concept of a Bloom Filter}{3}{}%
 \contentsline {section}{\numberline {2.2}Original Paper by Burton Howard Bloom}{3}{}%
 \contentsline {section}{\numberline {2.3}Less Hashing, Same Performance}{5}{}%
-\contentsline {chapter}{Bibliography}{6}{}%
+\contentsline {section}{\numberline {2.4}Network Applications of Bloom Filters}{6}{}%
+\contentsline {section}{\numberline {2.5}Probability and Computing by Mitzenmacher and Upfal}{6}{}%
+\contentsline {section}{\numberline {2.6}Partitioned learned bloom filter}{6}{}%
+\contentsline {section}{\numberline {2.7}Adaptive Learned Bloom Filters}{7}{}%
+\contentsline {section}{\numberline {2.8}Optimizing bloom filter: Challenges, solutions, and comparisons}{7}{}%
+\contentsline {chapter}{Bibliography}{8}{}%

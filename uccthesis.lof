@@ -5,3 +5,4 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Background and Literature Review}{3}{}%
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Bloom Filter Summary}}{4}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces An example of a bloom filter taken from \blx@tocontentsinit {0}\cite {broder2004network}.The filter begins as an array of all 0s. Each item in the set xi is hashed k times, with each hash yielding a bit location; these bits are set to 1. To check if an element y is in the set, hash it k times and check the corresponding bits. The element y1 cannot be in the set, since a0 is found at one of the bits. The element y2 is either in the set or the filter has yielded a false positive.}}{5}{}%
