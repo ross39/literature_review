@@ -83,12 +83,12 @@ The paper by Vaidya et al. \cite{vaidya2020partitioned} is a very interesting pa
 
 \cite{vaidya2020partitioned}
 \section{Adaptive Learned Bloom Filters}
-The paper by Dai et al. \cite{dai2019adaptive} is a very interesting paper that discusses the use of Bloom Filters in the context of
-\cite{dai2019adaptive}
+The paper by Dai et al. \cite{dai2019adaptive} is a very interesting paper that discusses optimizing the performance of Bloom Filters by incorporating a machine learning model, thus lowering the false positive rate(FPR). What I found most interesting about this paper is that machine learning methods are giving new hope of reducing false positive rates beyond the theoretical limit. The theoretical limit was analysed in Carter et al. \cite{carter1978exact}. To achieve a FPR of $ \epsilon $, the bloom filter costs at least $ n \log_2 (1/\epsilon)\log_2 e$ bits $(n = |S|)$ which is $\log_2 e \approx 44\%$. The authors proposed improvements are demonstrated on two tasks
+\begin{itemize}
+    \item Malicious URL detection
+    \item Virus Scan
+\end{itemize}
 
-\section{Optimizing bloom filter: Challenges, solutions, and comparisons}
-The paper by Dai et al. \cite{dai2019optimizing} is a very interesting paper that discusses the use of Bloom Filters in the context of
-\cite{dai2019optimizing}
 
 %
 %

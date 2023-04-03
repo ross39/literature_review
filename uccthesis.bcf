@@ -2375,9 +2375,7 @@
     <bcf:citekey order="13" intorder="1">vaidya2020partitioned</bcf:citekey>
     <bcf:citekey order="14" intorder="1">vaidya2020partitioned</bcf:citekey>
     <bcf:citekey order="15" intorder="1">dai2019adaptive</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">dai2019adaptive</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">dai2019optimizing</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">dai2019optimizing</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">carter1978exact</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

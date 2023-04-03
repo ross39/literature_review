@@ -146,6 +146,50 @@
       \field{pages}{485\bibrangedash 509}
       \range{pages}{25}
     \endentry
+    \entry{carter1978exact}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=70dbe6278823ea63300f2ef53add9f07}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+        {{hash=643084f11e3e7451a92f1929467de8d9}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=69fc3648695bdb0cfbba6903ec76dae2}{%
+           family={Gill},
+           familyi={G\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=76fe5aa89489a62e63c07ee4d63976be}{%
+           family={Markowsky},
+           familyi={M\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1a43e075cd5e2a7b5277d03fa18dc017}{%
+           family={Wegman},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec61bcdcf993a0055d0ca1c7203cc0ea}
+      \strng{fullhash}{50d9d7e99535c733e994a615815dc50a}
+      \strng{bibnamehash}{ec61bcdcf993a0055d0ca1c7203cc0ea}
+      \strng{authorbibnamehash}{ec61bcdcf993a0055d0ca1c7203cc0ea}
+      \strng{authornamehash}{ec61bcdcf993a0055d0ca1c7203cc0ea}
+      \strng{authorfullhash}{50d9d7e99535c733e994a615815dc50a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the tenth annual ACM symposium on Theory of computing}
+      \field{title}{Exact and approximate membership testers}
+      \field{year}{1978}
+      \field{pages}{59\bibrangedash 65}
+      \range{pages}{7}
+    \endentry
     \entry{dai2019adaptive}{article}{}
       \name{author}{2}{}{%
         {{hash=abe243c80b99676f1ac52a0f39ca794a}{%
@@ -272,7 +316,6 @@
       \field{year}{2020}
     \endentry
   \enddatalist
-  \missing{dai2019optimizing}
 \endrefsection
 \endinput
 

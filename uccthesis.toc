@@ -14,5 +14,4 @@
 \contentsline {section}{\numberline {2.5}Probability and Computing by Mitzenmacher and Upfal}{6}{}%
 \contentsline {section}{\numberline {2.6}Partitioned learned bloom filter}{6}{}%
 \contentsline {section}{\numberline {2.7}Adaptive Learned Bloom Filters}{7}{}%
-\contentsline {section}{\numberline {2.8}Optimizing bloom filter: Challenges, solutions, and comparisons}{7}{}%
 \contentsline {chapter}{Bibliography}{8}{}%

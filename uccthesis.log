@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  29 MAR 2023 22:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  4 APR 2023 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -993,15 +993,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'uccthesis.bbl' found.
- (./uccthesis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                dai2019optimizing
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./uccthesis.bbl)
 Package biblatex Info: Reference section=0 on input line 29.
 Package biblatex Info: Reference segment=0 on input line 29.
 Package minitoc(hints) Info: I0049
@@ -1174,14 +1166,7 @@ Overfull \hbox (3.58972pt too wide) in paragraph at lines 78--78
 []\T1/futs/b/n/17.28 (-20) Probability and Com-put-ing by Mitzen-macher and
  []
 
-[6]
-
-LaTeX Warning: Citation 'dai2019optimizing' on page 7 undefined on input line 90.
-
-
-LaTeX Warning: Citation 'dai2019optimizing' on page 7 undefined on input line 91.
-
-[7]
+[6] [7]
 Overfull \hbox (28.74872pt too wide) in paragraph at lines 99--99
 \T1/futs/m/n/12 (-20) (Ada-BF): Ef-fi-cient uti-liza-tion of the clas-si-fier''.  In: \T1/futs/m/it/12 (-20) arXiv preprint arXiv:1910.09131
  []
@@ -1221,18 +1206,18 @@ Package logreq Info: Writing requests to 'uccthesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38066 strings out of 476025
- 879436 string characters out of 5790017
+ 38076 strings out of 476025
+ 879642 string characters out of 5790017
  1861388 words of memory out of 5000000
- 57347 multiletter control sequences out of 15000+600000
- 650389 words of font info for 349 fonts, out of 8000000 for 9000
+ 57349 multiletter control sequences out of 15000+600000
+ 650675 words of font info for 352 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  117i,11n,118p,2272b,2897s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on uccthesis.pdf (15 pages, 927879 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on uccthesis.pdf (15 pages, 932154 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 90140 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 94236 words of extra memory for PDF output out of 106986 (max. 10000000)
 
