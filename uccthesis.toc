@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {2.2}Original Paper by Burton Howard Bloom}{3}{}%
 \contentsline {section}{\numberline {2.3}Less Hashing, Same Performance}{5}{}%
 \contentsline {section}{\numberline {2.4}Network Applications of Bloom Filters}{6}{}%
-\contentsline {section}{\numberline {2.5}Probability and Computing by Mitzenmacher and Upfal}{6}{}%
-\contentsline {section}{\numberline {2.6}Adaptive Learned Bloom Filters}{6}{}%
-\contentsline {section}{\numberline {2.7}Partitioned learned bloom filter}{7}{}%
+\contentsline {section}{\numberline {2.5}Probability and Computing by Mitzenmacher and Upfal}{7}{}%
+\contentsline {section}{\numberline {2.6}Adaptive Learned Bloom Filters}{7}{}%
+\contentsline {section}{\numberline {2.7}Partitioned learned bloom filter}{8}{}%
 \contentsline {chapter}{Bibliography}{9}{}%

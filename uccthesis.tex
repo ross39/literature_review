@@ -65,21 +65,26 @@ The paper was the first paper to introduce the idea of \textit{Allowable Error H
 he paper by  Kirsch and Mitzenmacher \cite{kirsch2006less} is a very nice paper that discusses the number of necessary hash functions to implement a Bloom Filter without any loss in asymptotic false positive probability. Specifically the paper proves a mathematical result that only two hash functions are necessary to implement the Bloom Filter. This paper is \textbf{not} saying that only two hash functions are all that is required for all Bloom Filters, rather that in certain cases only two hash functions are required. This is a vitally important result as it means we can limit our computation overhead and maintain the same performance. Bloom filters are randomized data structures as they rely on pseudorandom hash functions. By reducing the number of hash functions needed then this cuts down on much of the non-trivial computation required to create a Bloom Filter. The important result that was proved in this paper is the following mathematical statement: $(1-e^\frac{-kn}{m})^k$, where m is array size in bits, n is the number of elements in the m size array and k is the number of hash functions. This formula gives us the approximate probability of false positives but Mitzenmacher did it without the assumption of independence, an important distinction from previous mathematical analysis done in other papers. Also related, The book by Mitzenmacher and Upfal \cite{mitzenmacher2017probability} is a very nice book on probability and computing that discusses Bloom Filters in a dedicated subchapter. The important takeaway from the chapter among many other things is that the if you have an m-bit Bloom filter with n elements inserted, then the optimal number k of hash functions to use is $k = \frac{m}{n}\ln 2$.
 
 \section{Network Applications of Bloom Filters}
-This survey paper\cite{broder2004network} discusses some very interesting applications for Bloom Filters and essential bloom filter background information. It's an important paper to get a better understanding of Bloom Filters and their uses. Specifically it discusses four instances of network related applications for Bloom Filters
+This survey paper\cite{broder2004network} discusses some very interesting applications for Bloom Filters and essential bloom filter background information. It's an important paper to get a better understanding of Bloom Filters and their uses. Specifically it discusses four instances of network related applications for Bloom Filters and their backgrounds as it relates to the use of Bloom filters. The four instances are as follows:
 \begin{itemize}
     \item Collaborating in overlay and peer-to-peer networks
     \item Resource routing
     \item Packet routing
     \item Network measurement
 \end{itemize}
+I found the network measurement application to be the most interesting application of the four. Essentially the use of Bloom filters for the network measurement problem revolves around the fact that Bloom filters can help us to answer difficult questions about the network. How many packets from a given flow pass through a router? Has a packet from this source passed through a router recently? Bloom filters have proven to be very useful in answering these questions. Whilst not strictly related to this thesis as this thesis is about relaxing the integrality assumption of $k$, it was enlightening to see different use cases of Bloom filters that I had not considered before.
 
-Assuming hash functions are perfectly random, the false positive rate(FPR) can be estimated as follows, after all the elements of set $S$ are hashed into the bloom filter, the probability that a specific bit is still 0 is
+The survey paper also reviews important mathematical background surrounding Bloom filters. Assuming hash functions are perfectly random, the false positive rate(FPR) can be estimated as follows, after all the elements of set $S$ are hashed into the bloom filter, the probability that a specific bit is still 0 is
 
 $ p ' = (1 - \frac{1}{m})^{kn} \approx e ^{-kn/m}$.
 
 Subsequently, if we let $p = e ^{-kn/m}$ a decent approximate and now let p be the proportion of 0 bits after all the $n$ elements are inserted in the bloom filter, then the probability of a false positive is $(1-p)^k \approx (1-p')^k \approx (1-p)^k$.
 
 The total number of bits in the filter is still $m$ and the number of hash functions is still $k$. The probability that a specific bit in the filter is 0 is still $(1-\frac{k}{m})^n \approx e^{-kn/m}$.
+
+Perhaps the most interesting section of the paper, in my opinion is the section on standard Bloom filter tricks. Specifically mathematical tricks. For example, suppose that two Bloom filters represent sets $S_1$ and $S_2$, both with the same number of bits and using the exact same hash functions. Then a Bloom filter that represents the union of the two sets can be obtained by taking the OR($\lor$) of the two bit vectors of the original Bloom filters. Also, another interesting idea is that Bloom filters can be easily halved in size which allows for the dynamic shrinking of a Bloom filter. Suppose the size of the Bloom filter is a power of 2. In order to halve the size of the Bloom filter we would just OR($\lor$) the first and second halves together and then when hashing is performed to query is an element in the set? The highest order bit can be masked, thus preserving the performance.
+
+These are just some of the interesting mathematical tricks that are discussed in the paper.
 
 
 \section{Probability and Computing by Mitzenmacher and Upfal}
