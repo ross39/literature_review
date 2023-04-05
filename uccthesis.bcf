@@ -2372,10 +2372,10 @@
     <bcf:citekey order="10" intorder="1">mitzenmacher2017probability</bcf:citekey>
     <bcf:citekey order="11" intorder="1">broder2004network</bcf:citekey>
     <bcf:citekey order="12" intorder="1">mitzenmacher2017probability</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">vaidya2020partitioned</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">vaidya2020partitioned</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">dai2019adaptive</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">carter1978exact</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">dai2019adaptive</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">carter1978exact</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">vaidya2020partitioned</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">dai2019adaptive</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

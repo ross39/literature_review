@@ -1568,6 +1568,7 @@ INPUT uccthesis.mtc0
 INPUT uccthesis.aux
 INPUT uccthesis.run.xml
 OUTPUT uccthesis.run.xml
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb

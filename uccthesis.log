@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  4 APR 2023 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  4 APR 2023 20:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1162,12 +1162,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [3
 
 ] [4 <./figures/bloom-filters-poster.png>] [5 <./figures/bloom_filter_example.png>]
-Overfull \hbox (3.58972pt too wide) in paragraph at lines 78--78
+Overfull \hbox (3.58972pt too wide) in paragraph at lines 85--85
 []\T1/futs/b/n/17.28 (-20) Probability and Com-put-ing by Mitzen-macher and
  []
 
-[6] [7]
-Overfull \hbox (28.74872pt too wide) in paragraph at lines 99--99
+[6] [7] [8]
+Overfull \hbox (28.74872pt too wide) in paragraph at lines 119--119
 \T1/futs/m/n/12 (-20) (Ada-BF): Ef-fi-cient uti-liza-tion of the clas-si-fier''.  In: \T1/futs/m/it/12 (-20) arXiv preprint arXiv:1910.09131
  []
 
@@ -1196,7 +1196,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the uccthesis.log file.
 
-[8
+[9
 
 
 
@@ -1206,18 +1206,18 @@ Package logreq Info: Writing requests to 'uccthesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38076 strings out of 476025
- 879642 string characters out of 5790017
- 1861388 words of memory out of 5000000
+ 38084 strings out of 476025
+ 879720 string characters out of 5790017
+ 1862388 words of memory out of 5000000
  57349 multiletter control sequences out of 15000+600000
- 650675 words of font info for 352 fonts, out of 8000000 for 9000
+ 651215 words of font info for 358 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  117i,11n,118p,2272b,2897s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on uccthesis.pdf (15 pages, 932154 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on uccthesis.pdf (16 pages, 939676 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  94236 words of extra memory for PDF output out of 106986 (max. 10000000)
 

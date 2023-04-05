@@ -65,29 +65,49 @@ The paper was the first paper to introduce the idea of \textit{Allowable Error H
 he paper by  Kirsch and Mitzenmacher \cite{kirsch2006less} is a very nice paper that discusses the number of necessary hash functions to implement a Bloom Filter without any loss in asymptotic false positive probability. Specifically the paper proves a mathematical result that only two hash functions are necessary to implement the Bloom Filter. This paper is \textbf{not} saying that only two hash functions are all that is required for all Bloom Filters, rather that in certain cases only two hash functions are required. This is a vitally important result as it means we can limit our computation overhead and maintain the same performance. Bloom filters are randomized data structures as they rely on pseudorandom hash functions. By reducing the number of hash functions needed then this cuts down on much of the non-trivial computation required to create a Bloom Filter. The important result that was proved in this paper is the following mathematical statement: $(1-e^\frac{-kn}{m})^k$, where m is array size in bits, n is the number of elements in the m size array and k is the number of hash functions. This formula gives us the approximate probability of false positives but Mitzenmacher did it without the assumption of independence, an important distinction from previous mathematical analysis done in other papers. Also related, The book by Mitzenmacher and Upfal \cite{mitzenmacher2017probability} is a very nice book on probability and computing that discusses Bloom Filters in a dedicated subchapter. The important takeaway from the chapter among many other things is that the if you have an m-bit Bloom filter with n elements inserted, then the optimal number k of hash functions to use is $k = \frac{m}{n}\ln 2$.
 
 \section{Network Applications of Bloom Filters}
-This paper\cite{broder2004network} discusses some very interesting applications for Bloom Filters, and it's an important paper to get a better understanding of Bloom Filters and their uses. Specifically it discusses four instances of network related applications for Bloom Filters
+This survey paper\cite{broder2004network} discusses some very interesting applications for Bloom Filters and essential bloom filter background information. It's an important paper to get a better understanding of Bloom Filters and their uses. Specifically it discusses four instances of network related applications for Bloom Filters
 \begin{itemize}
     \item Collaborating in overlay and peer-to-peer networks
     \item Resource routing
     \item Packet routing
     \item Network measurement
 \end{itemize}
-Specifically what I learned from the paper is that Bloom Filters can play an important role in the optimization of networks. But more importantly the paper stresses there is a lot of room for innovation and improvement regarding Bloom Filters in the area of networking and the above list of network related applications involving Bloom Filters is not exhaustive, rather it is a starting point.
+
+Assuming hash functions are perfectly random, the false positive rate(FPR) can be estimated as follows, after all the elements of set $S$ are hashed into the bloom filter, the probability that a specific bit is still 0 is
+
+$ p ' = (1 - \frac{1}{m})^{kn} \approx e ^{-kn/m}$.
+
+Subsequently, if we let $p = e ^{-kn/m}$ a decent approximate and now let p be the proportion of 0 bits after all the $n$ elements are inserted in the bloom filter, then the probability of a false positive is $(1-p)^k \approx (1-p')^k \approx (1-p)^k$.
+
+The total number of bits in the filter is still $m$ and the number of hash functions is still $k$. The probability that a specific bit in the filter is 0 is still $(1-\frac{k}{m})^n \approx e^{-kn/m}$.
 
 
 \section{Probability and Computing by Mitzenmacher and Upfal}
 The chapter dedicated to Bloom filters in the fantastic book Probability and Computing by Mitzenmacher and Upfal \cite{mitzenmacher2017probability} is a very nice chapter that discusses Bloom Filters in a dedicated subchapter. The important takeaway from the chapter among many other things is that the if you have an m-bit Bloom filter with n elements inserted, then the optimal number k of hash functions to use is $k = \frac{m}{n}\ln 2$.
 
-\section{Partitioned learned bloom filter}
-The paper by Vaidya et al. \cite{vaidya2020partitioned} is a very interesting paper that discusses the use of Bloom Filters in the context of
-
-\cite{vaidya2020partitioned}
 \section{Adaptive Learned Bloom Filters}
-The paper by Dai et al. \cite{dai2019adaptive} is a very interesting paper that discusses optimizing the performance of Bloom Filters by incorporating a machine learning model, thus lowering the false positive rate(FPR). What I found most interesting about this paper is that machine learning methods are giving new hope of reducing false positive rates beyond the theoretical limit. The theoretical limit was analysed in Carter et al. \cite{carter1978exact}. To achieve a FPR of $ \epsilon $, the bloom filter costs at least $ n \log_2 (1/\epsilon)\log_2 e$ bits $(n = |S|)$ which is $\log_2 e \approx 44\%$. The authors proposed improvements are demonstrated on two tasks
+The paper by Dai et al. \cite{dai2019adaptive} is a very interesting paper that discusses optimizing the performance of Bloom Filters by incorporating a machine learning model, thus lowering the false positive rate(FPR). What I found most interesting about this paper is that machine learning methods are giving new hope of reducing false positive rates beyond the theoretical limit. The theoretical limit was analysed in Carter et al. \cite{carter1978exact}. To achieve a FPR of $ \epsilon $, the bloom filter costs at least $ n \log_2 (1/\epsilon)\log_2 e$ bits $(n = |S|)$ which is $\log_2 e \approx 44\%$. The main idea behind the improvements offered by a machine learning classifier is that the classifier can reduce the number of keys hashed into the bloom filter thus reducing the FPR and saving memory. Specifically the authors contribution revolves around two algorithms Ada-BF and disjoint Ada-BF. Ada-BF tunes the number of hash functions used to adjust the FPR and disjoint Ada-BF allocated variable memory based on the number of hashes used. The authors proposed improvements are demonstrated on two tasks
 \begin{itemize}
     \item Malicious URL detection
     \item Virus Scan
 \end{itemize}
+
+Across both tasks the authors adaptive bloom filter showed huge improvements over the standard BF where is the FPR is reduced by 98\%. In terms of improvements over the learned bloom filter the improvements are over 80\%. Truly a very interesting paper that shows the potential of machine learning in the area of Bloom Filters, when it's sensibly applied.
+
+\section{Partitioned learned bloom filter}
+The paper by Vaidya et al. \cite{vaidya2020partitioned} is a very interesting paper that discusses the use of machine learning to optimize the performance of Bloom Filters. This is a more recent paper than \cite{dai2019adaptive}. The paper discusses more recent work on the topic of bloom filter optimization via machine learning. Specifically it discusses how to reorganise the problem of optimal model utilization as an optimisation problem. Essentially the paper aims to address how to squeeze as much performance out of the machine learning model as possible via optimisation methods, which translates to a more performant bloom filter. The paper frames this optimisation problem as such
+
+$$
+    \begin{gathered}
+        \min _{t_{i}, f_{i}}\left(\sum_{i=1}^{k}|S| \times\left(G\left(t_{i}\right)-G\left(t_{i-1}\right)\right) \times c \log _{2}\left(\frac{1}{f_{i}}\right)\right)+\text { Size of Learned Model } \\
+        \text { constraints } \sum_{i=1}^{k}\left(H\left(t_{i}\right)-H\left(t_{i-1}\right)\right) \times f_{i} \leq F \\
+        f_{i} \leq 1, i=1 \ldots k \\
+        \left(t_{i}-t_{i-1}\right) \geq 0, i=1 \ldots k ; t_{0}=0 ; t_{k}=1
+    \end{gathered}
+$$
+
+There are a number of important parts to this optimsation problem. The objective function to be minimized represents the total size of the learned Bloom filter. The first constraint forces the overall positive rate to stay below the target $F$. The next constraint forces the false positive rate of each partition to be less than or equal to 1. The last constraint ensures threshold values are increasing and sufficiently cover the interval $[0,1]$.
+
 
 
 %
