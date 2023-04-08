@@ -1560,6 +1560,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/fourier/futr8c.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/fourier/futr8t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/fourier/futr8t.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/public/fourier/futmi.vf
 OUTPUT uccthesis.maf
 INPUT ./uccthesis.mtc
 INPUT uccthesis.mtc
@@ -1569,6 +1572,7 @@ INPUT uccthesis.aux
 INPUT uccthesis.run.xml
 OUTPUT uccthesis.run.xml
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb

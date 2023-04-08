@@ -100,7 +100,17 @@ the linked list for it. If it's not present in our dictionary then the expected 
 
 In the worse case scenario, the maximum time to search for a word is proportional to the maximum number of words in the bin. When $n = m $ this is $ \vartheta(\ln n / \ln \ln n)$ with a probability close to 1, which with high probability is the maximum search time for such a hash table. Another drawback of chain hashing can be wasted space. If we use n bins for n items, several of the bins will be empty, potentially leading to wasted space. The space wasted can be traded off against the search time by making the average number of words per bin larger than 1.
 
-The next reasonable question is \textit{is there a way to save space instead of time?}. This is where hashing bit strings comes into play.
+The next reasonable question is \textit{is there a way to save space instead of time?}. This is where hashing bit strings comes into play. Using the same example of a database of unsuitable passwords we can assume that a password is restricted to a certain size(again we ignore best security practices). Say the size is restricted to eight ASCII characters which is 64 bits(8 bytes). Suppose we use a hash function to map each word into a 32 bit string. Essentially what we're doing is generating a fingerprint of the password. Just as a fingerprint is condensed way to identify a person, so is a hashed fingerprint of a password. All we need to do is keep the fingerprints in a sorted data structure like a linked list or an array, and we can do a binary search to see if a password is on the list. The astute reader may notice that in some cases the password checker may generate a false positive! This is because the hash function may generate the same fingerprint for two different passwords. However, this is the only mistake this type of algorithm can make. I hope the reader sees where I am going with this. It sounds a lot like our Bloom filter which will only ever make the mistake of a false positive, doesn't it?
+
+Now we get to the heart of Bloom filters. The problem we have described above is an approximate set membership problem. We have a set $S = {s_1, s_2, ..., s_m}$ of $m$ elements from a large universe $U$(Not infinite but very large). We would like to ask 'is $x$ a member of set $S$?'. Furthermore, we want to save space, so we allow occasional false positives. How large should the range of the hash functions used to create the fingerprints be? The probability that an acceptable password has a fingerprint that is different from any specific unacceptable password in $S$ is $(1-1/2^b)$. Therefore,  if the set $S$ has size $m$ and if we use $b$ bits for the fingerprint, then the probability of a false positive for an acceptable password is $1 - (1-1/2^b)^m \geq 1 - e^\frac{-m}{2^b}$. If we want this probability of a false positive to be less than a constant $c$ we need
+
+$e ^\frac{-m}{2^b} \geq 1 - c$ which implies that
+
+$b \geq \log_2 \frac{m}{\ln(1/(1-c))}$ That is that we need $b = \Omega (\log_2 m)$ bits. If we use $b = 2\log_2 m $ bits then the probability of a false positive falls to
+
+$1 - (1 - \frac{1}{m^2})^m < \frac{1}{m}$
+
+If our database has $2^{16}$ passwords(65,536) then using 32 bits when hashing results in a false positive probability of less than $\frac{1}{65,536}$. That is in essence the power of Bloom filters and how hashing is vital to the performance of Bloom filters.
 
 
 \section{Adaptive Learned Bloom Filters}
